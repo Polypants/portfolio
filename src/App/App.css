@@ -1,0 +1,8 @@
+* {
+  cursor: none;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color .5s linear;
+}

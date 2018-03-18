@@ -1,0 +1,68 @@
+.Cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  pointer-events: none;
+}
+.Cursor--visible {
+  display: block;
+}
+.Cursor_introCenter {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: rgba( 0, 0, 0, 0.5 );
+  transform: scale( 2 );
+  transition: background-color 1s;
+}
+.Cursor--intro .Cursor_introCenter {
+  background-color: white;
+  transform: scale( 1 );
+}
+.Cursor_introTrailContainer {
+  transition: transform 2s cubic-bezier( 0, 0, .27, 1 );
+}
+.Cursor_introTrail {
+  border: 1px solid black;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  transform: scale( 0 );
+  transition: transform 0.4s;
+}
+.Cursor--intro .Cursor_introTrail {
+  transform: scale( 1 );
+  border: 1px solid white;
+}
+.Cursor--intro .Cursor_introCenter {
+  background-color: white;
+}
+.Cursor_project {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.Cursor--projectItem .Cursor_project {
+  opacity: 1;
+}
+.Cursor--projectItem .Cursor_introCenter {
+  transform: scale( 0 );
+}
+.Cursor_projectShaft {
+  width: 80px;
+  height: 4px;
+  background-color: black;
+  transform: scaleX( 0 );
+  transition: transform 0.5s;
+  transform-origin: 100% 50%;
+}
+.Cursor--projectItem .Cursor_projectShaft {
+  transform: scaleX( 1 );
+}
+.Cursor_projectPoint {
+  width: 15px;
+  height: 15px;
+  border-right:4px solid black;
+  border-top: 4px solid black;
+  transform: rotate( 45deg ) translate( 50px, -34px );
+}

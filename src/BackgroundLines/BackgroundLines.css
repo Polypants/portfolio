@@ -1,0 +1,37 @@
+.BackgroundLines_line1,
+.BackgroundLines_line2,
+.BackgroundLines_line3,
+.BackgroundLines_line4,
+.BackgroundLines_line5,
+.BackgroundLines_line6,
+.BackgroundLines_line7 {
+  width: 2px;
+  height: 100%;
+  background-color: grey;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  left: -1px;
+  z-index: -100;
+}
+.BackgroundLines_line1 {
+  transform: translateX(12.5vw);
+}
+.BackgroundLines_line2 {
+  transform: translateX(25vw);
+}
+.BackgroundLines_line3 {
+  transform: translateX(37.5vw);
+}
+.BackgroundLines_line4 {
+  transform: translateX(50vw);
+}
+.BackgroundLines_line5 {
+  transform: translateX(62.5vw);
+}
+.BackgroundLines_line6 {
+  transform: translateX(75vw);
+}
+.BackgroundLines_line7 {
+  transform: translateX(87.5vw);
+}
