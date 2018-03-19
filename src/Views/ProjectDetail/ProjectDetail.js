@@ -11,9 +11,13 @@ class ProjectDetail extends Component {
   }
 
   componentDidMount() {
-    document.body.style.backgroundColor = this.props.project.backgroundColor;
-    window.scrollTo(0, 0);
+    // I need this to only fire when transitioning from home page
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 1200);
+    
     window.addEventListener('scroll', this.handleScroll);
+    this.props.setIsIntroForProjectDetail();
   }
 
   componentWillUnmount() {
@@ -29,6 +33,9 @@ class ProjectDetail extends Component {
   render() {
     return (
       <div className="ProjectDetail" style={{color: this.props.project.textColor}}>
+        <div className="ProjectDetail_background" style={
+          { backgroundColor: this.props.project.backgroundColor }
+        }></div>
         <div className="ProjectDetail_backgroundCircles" style={{transform: `translateY(-${this.state.scrollTop * .30}px)`}}>
           <div className="ProjectDetail_backgroundCircles_circle"></div>
         </div>

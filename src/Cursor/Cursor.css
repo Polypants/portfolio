@@ -4,6 +4,7 @@
   left: 0;
   display: none;
   pointer-events: none;
+  z-index: 100;
 }
 .Cursor--visible {
   display: block;
@@ -12,16 +13,17 @@
   width: 3px;
   height: 3px;
   border-radius: 50%;
-  background-color: rgba( 0, 0, 0, 0.5 );
-  transform: scale( 2 );
-  transition: background-color 1s;
+  background-color: rgba( 0, 0, 0, 0.7 );
+  transform: scale( 3.5 );
+  transition: background-color 1s, transform 0.7s;
 }
 .Cursor--intro .Cursor_introCenter {
   background-color: white;
   transform: scale( 1 );
 }
 .Cursor_introTrailContainer {
-  transition: transform 2s cubic-bezier( 0, 0, .27, 1 );
+  transition: transform 2s ease-out;
+  transition-delay: 0s;
 }
 .Cursor_introTrail {
   border: 1px solid black;

@@ -9,6 +9,7 @@ class ProjectsList extends Component {
     const Projects = Data.projects.map((project) => {
       return <ProjectListItem project={project} key={project.key} onProjectItemMouseHoverStateChange={ this.props.onProjectItemMouseHoverStateChange } />
     });
+    
     return (
       <div className="ProjectsList">
         <BackgroundLines />

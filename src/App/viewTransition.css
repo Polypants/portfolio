@@ -1,0 +1,22 @@
+.Home, .ProjectDetail {
+  position: absolute;
+  top: 0;
+}
+
+.view-exit {
+  opacity: 1;
+  z-index: 10;
+}
+.view-exit.view-exit-active {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+.view-enter {
+  opacity: 0;
+  z-index: 1;
+}
+.view-enter.view-enter-active {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+  transition-delay: 1.2s;
+}

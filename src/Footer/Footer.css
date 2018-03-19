@@ -2,6 +2,8 @@
   background-color: #0a0a0a;
   padding: 150px;
   padding-bottom: 130px;
+  z-index: 50;
+  position: relative;
 }
 .Footer_contact {
   margin-bottom: 150px;
@@ -29,5 +31,4 @@
 .Footer_icon {
   height: 85px;
   margin-right: 40px;
-  cursor: pointer;
 }

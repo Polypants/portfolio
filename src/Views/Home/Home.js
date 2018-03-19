@@ -12,11 +12,10 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    document.body.style.backgroundColor = "white";
-  }
-
-  componentWillUnmount() {
-    console.log("unmount");
+    setTimeout(() => {
+      console.log("fired");
+      window.scrollTo(0, this.props.homeScrollPos);
+    }, 1200);
   }
 
   render() {

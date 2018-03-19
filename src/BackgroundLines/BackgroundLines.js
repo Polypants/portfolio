@@ -13,6 +13,7 @@ class BackgroundLines extends Component {
         <div className="BackgroundLines_line6"></div>
         <div className="BackgroundLines_line7"></div>
       </div>
+
     );
   }
 }

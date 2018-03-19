@@ -46,14 +46,13 @@ class ProjectListItem extends Component {
   }
 
   onChangeForTheme = (isVisible) => {
-    // if ( isVisible ) {
-    //   if (this.props.project.theme === 'dark') {
-    //     document.body.style.backgroundColor = '#161616';
-    //   } else if (this.props.project.theme === 'light') {
-    //     document.body.style.backgroundColor = 'white';
-    //   }
-    // }
-    
+    if ( isVisible ) {
+      if (this.props.project.theme === 'dark') {
+        document.body.style.backgroundColor = '#161616';
+      } else if (this.props.project.theme === 'light') {
+        document.body.style.backgroundColor = 'white';
+      }
+    }
   }
 
   onContainerClick = () => {
@@ -71,7 +70,11 @@ class ProjectListItem extends Component {
       { 'ProjectListItem_text--dark': this.props.project.theme === 'dark' }
     );
     return (
-      <VisibilitySensor onChange={ this.onChangeForTheme }>
+      <VisibilitySensor
+        onChange={ this.onChangeForTheme }
+        partialVisibility={ true }
+        offset={{ bottom: 275, top: 275 }}
+      >
         <VisibilitySensor
           onChange={ this.onChange }
           partialVisibility={ true }
